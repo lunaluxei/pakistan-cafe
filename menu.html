@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f3eb">
+  <title>Our Menu | Pakistan Cafe</title>
+  <meta name="description" content="Explore the food and drinks at Pakistan Cafe in Gujar Khan.">
+  <link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    .food-photo {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+    .menu-page {
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 6% 100px;
+    }
+
+    .menu-heading {
+      text-align: center;
+      margin: 30px 0 45px;
+    }
+
+    .menu-heading p {
+      color: #a77b48;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    .menu-heading h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(42px, 7vw, 76px);
+      color: #30251f;
+      margin: 12px 0;
+    }
+
+    .menu-heading .subtitle {
+      color: #75685d;
+      letter-spacing: normal;
+      text-transform: none;
+      font-size: 16px;
+    }
+
+    .menu-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 38px;
+    }
+
+    .menu-filters button {
+      border: 1px solid #d8c7b2;
+      background: transparent;
+      color: #30251f;
+      padding: 11px 22px;
+      border-radius: 30px;
+      cursor: pointer;
+      font: inherit;
+      transition: 0.25s ease;
+    }
+
+    .menu-filters button:hover,
+    .menu-filters button.active {
+      background: #30251f;
+      color: #fffdf9;
+      border-color: #30251f;
+    }
+
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .food-card {
+      background: #fffdf9;
+      border: 1px solid #e8dfd3;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .food-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px #30251f12;
+    }
+
+    .food-art {
+      height: 190px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #eee3d3, #f9f5ed);
+      color: #8c6b4a;
+      font: 14px Georgia, serif;
+      letter-spacing: 1px;
+    }
+
+    .food-info {
+      padding: 22px;
+    }
+
+    .food-info span {
+      color: #a77b48;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .food-info h2 {
+      color: #30251f;
+      font: 24px Georgia, serif;
+      margin: 10px 0;
+    }
+
+    .food-info p {
+      color: #75685d;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .menu-note {
+      text-align: center;
+      color: #75685d;
+      margin-top: 35px;
+      font-size: 13px;
+    }
+
+    .menu-footer {
+      text-align: center;
+      padding: 25px;
+      background: #30251f;
+      color: #fffdf9;
+    }
+
+    @media (max-width: 800px) {
+      .food-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 520px) {
+      .food-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .food-art {
+        height: 220px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .food-card {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="menu-page">
+    <header class="menu-heading">
+      <p>Made for memorable moments</p>
+      <h1>Our Menu</h1>
+      <p class="subtitle">
+        Discover your next favourite at Pakistan Cafe.
+      </p>
+    </header>
+
+    <nav class="menu-filters" aria-label="Filter menu items">
+      <button class="active" data-filter="all" aria-pressed="true">All</button>
+      <button data-filter="food" aria-pressed="false">Food</button>
+      <button data-filter="dessert" aria-pressed="false">Desserts</button>
+      <button data-filter="drink" aria-pressed="false">Drinks</button>
+    </nav>
+
+    <section class="food-grid" aria-label="Cafe menu items">
+      <article class="food-card" data-category="food">
+        <img
+  class="food-photo"
+  src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=800&q=85"
+  alt="Grilled chicken burger"
+  loading="lazy"
+>
+        <div class="food-info">
+          <span>From the kitchen</span>
+          <h2>Chicken Grilled Burger</h2>
+          <p>A grilled chicken burger made for a satisfying meal.</p>
+        </div>
+      </article>
+
+      <article class="food-card" data-category="food">
+       <img class="food-photo" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=85" alt="Chicken tikka pizza" loading="lazy">
+        <div class="food-info">
+          <span>Pizza selection</span>
+          <h2>Chicken Tikka Pizza</h2>
+          <p>A flavourful pizza inspired by chicken tikka.</p>
+        </div>
+      </article>
+
+      <article class="food-card" data-category="food">
+       <img class="food-photo" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=85" alt="Beef steak burger" loading="lazy">
+        <div class="food-info">
+          <span>From the grill</span>
+          <h2>Beef Steak Burger</h2>
+          <p>A hearty beef burger for burger lovers.</p>
+        </div>
+      </article>
+
+      <article class="food-card" data-category="dessert">
+        <img class="food-photo" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=85" alt="Chocolate cake" loading="lazy">
+        <div class="food-info">
+          <span>Sweet treats</span>
+          <h2>Cakes</h2>
+          <p>A sweet treat to enjoy with your favourite drink.</p>
+        </div>
+      </article>
+
+      <article class="food-card" data-category="food">
+        <img class="food-photo" src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=85" alt="Panini sandwich" loading="lazy">
+        <div class="food-info">
+          <span>Freshly prepared</span>
+          <h2>Panini Sandwich</h2>
+          <p>A warm sandwich for a relaxed cafe break.</p>
+        </div>
+      </article>
+
+      <article class="food-card" data-category="food">
+        <img class="food-photo" src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=800&q=85" alt="BBQ chicken pizza" loading="lazy">
+        <div class="food-info">
+          <span>Pizza selection</span>
+          <h2>BBQ Chicken Pizza</h2>
+          <p>A barbecue-inspired chicken pizza.</p>
+        </div>
+      </article>
+
+      <article class="food-card" data-category="food">
+       <img class="food-photo" src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=800&q=85" alt="Mini pizza" loading="lazy">
+        <div class="food-info">
+          <span>Pizza selection</span>
+          <h2>Mini Pizza</h2>
+          <p>A smaller pizza option for a quick bite.</p>
+        </div>
+      </article>
+
+      <article class="food-card" data-category="drink">
+       <img class="food-photo" src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=85" alt="Oreo shake" loading="lazy">
+        <div class="food-info">
+          <span>Cool and creamy</span>
+          <h2>Oreo Shake</h2>
+          <p>A creamy shake inspired by Oreo cookies.</p>
+        </div>
+      </article>
+
+      <article class="food-card" data-category="drink">
+        <img class="food-photo" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85" alt="Chocolate frappe" loading="lazy">
+        <div class="food-info">
+          <span>Chocolate favourites</span>
+          <h2>Chocolate Frappe</h2>
+          <p>A chilled chocolate drink for a refreshing break.</p>
+        </div>
+      </article>
+
+      <article class="food-card" data-category="drink">
+       <img class="food-photo" src="https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=800&q=85" alt="Mango shake" loading="lazy">
+        <div class="food-info">
+          <span>Fresh flavours</span>
+          <h2>Mango Shake</h2>
+          <p>A mango-flavoured shake.</p>
+        </div>
+      </article>
+
+      <article class="food-card" data-category="drink">
+        <img class="food-photo" src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=800&q=85" alt="Banana shake" loading="lazy">
+        <div class="food-info">
+          <span>Fresh flavours</span>
+          <h2>Banana Shake</h2>
+          <p>A smooth banana shake.</p>
+        </div>
+      </article>
+
+      <article class="food-card" data-category="drink">
+       <img class="food-photo" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85" alt="Chocolate mocha frappe" loading="lazy">
+        <div class="food-info">
+          <span>Coffee selection</span>
+          <h2>Chocolate Mocha Frappe</h2>
+          <p>A chilled coffee drink with chocolate flavour.</p>
+        </div>
+      </article>
+
+      
+<article class="food-card" data-category="drink">
+ <img
+  class="food-photo"
+  src="./images/mint-margarita.png"
+  alt="Fresh mint margarita with lime"
+>
+  <div class="food-info">
+    <span>Refreshing choice</span>
+    <h2>Mint Margarita</h2>
+    <p>A cool mint drink for a refreshing pause.</p>
+  </div>
+</article>
+
+    </section>
+
+    <p class="menu-note">
+      Menu descriptions are for display. Confirm availability and prices with the cafe.
+    </p>
+  </main>
+
+  <footer class="menu-footer">
+    Pakistan Cafe · Gujar Khan
+  </footer>
+
+  <script>
+    const filterButtons = document.querySelectorAll("[data-filter]");
+    const foodCards = document.querySelectorAll(".food-card");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selected = button.dataset.filter;
+
+        filterButtons.forEach((item) => {
+          const isActive = item === button;
+          item.classList.toggle("active", isActive);
+          item.setAttribute("aria-pressed", String(isActive));
+        });
+
+        foodCards.forEach((card) => {
+          card.hidden =
+            selected !== "all" && card.dataset.category !== selected;
+        });
+      });
+    });
+  </script>
+</body>
+</html>
