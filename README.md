@@ -19,4 +19,5 @@ A modern, responsive cafe website designed with an elegant layout and a warm vis
 This project was created to practise frontend web development, improve design skills, and explore interactive 3D elements for a cafe website.
 
 ## Deployment
-Hosted using GitHub Pages .
+Hosted using cloudeflare Pages
+
